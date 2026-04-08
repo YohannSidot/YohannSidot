@@ -1,62 +1,42 @@
-# Yohann Sidot
+# Hey, I'm Yohann 👋
 
-**Freelance in Web Application Security & OSINT**  
-Security Testing • Vulnerability Assessment • Digital Investigations
+Cybersecurity student building **Senthex** an AI firewall for LLM API calls.
 
----
+## What I'm building
 
-## About Me
-I am an independent cybersecurity practitioner with a focus on **web application testing**, **open-source intelligence (OSINT)**, and **security research**.  
-I operate as a freelancer, building practical experience through real-world engagements, personal labs, and continuous training.
+[Senthex](https://senthex.com/proxy) is a transparent reverse proxy that scans every request and response to OpenAI, Anthropic, Mistral, Gemini, and OpenRouter in real time. One line of code, 16ms overhead, 24 security shields.
 
----
+```python
+client = OpenAI(
+    api_key="sk-...",
+    base_url="https://app.senthex.com/v1",
+    default_headers={"X-Senthex-Key": "your-key"}
+)
+```
 
-## Core Competencies
-- **Web Application Security** – Identifying and verifying common vulnerabilities, applying OWASP Top 10 methodologies  
-- **OSINT & Reconnaissance** – Gathering and analyzing publicly available data for security assessments  
-- **Network Fundamentals** – Understanding of protocols, segmentation, and secure configurations  
-- **Lab Environments** – Building and using virtualized environments for security testing  
-- **Security Tools** – Practical use of industry-standard testing and analysis tools  
-- **Bug Bounty & CTF Participation** – Experience in competitive and real-world vulnerability hunting
+**Some things I built that nobody else does:**
+- Multi-turn injection tracking across entire conversations
+- Anti-bypass system with progressive trust levels — the harder you try, the harder it gets
+- Canary tokens for system prompt leak detection
+- Data classification with automatic provider routing
+- Agent-native mode — autonomous agents monitor their own security via response headers
 
----
+## Stack
 
-## Skills Overview
-Experienced with a range of systems, tools, and workflows, including:
+Python · FastAPI · React · PostgreSQL · Redis · Docker
 
-- **Operating Systems:** Linux distributions (Ubuntu, Debian, Fedora), Windows  
-- **Programming & Scripting:** Python, Bash, C, Shell scripting  
-- **Security Tools:** Burp Suite, Metasploit, Ghidra, IDA Pro, Maltego, Sherlock, sqlmap  
-- **Networking Concepts:** TCP/IP, DNS, DHCP, NAT, Firewall, Proxy  
-- **Virtualization & Infrastructure:** Proxmox, VirtualBox, network simulations  
-- **Platforms:** Root-Me, HackTheBox, TryHackMe, HackerOne, Intigriti  
+## Writing
 
----
+- [How I Detect Multi-Turn Prompt Injections Without ML](https://dev.to/yohannsidot/how-i-detect-multi-turn-prompt-injections-without-ml-13oj)
+- [How Canary Tokens Detect System Prompt Leaks in Real Time](https://dev.to/yohannsidot)
 
-## Selected Projects
-- **Custom Security Lab** – Multi-VM setup simulating enterprise networks for testing purposes  
-- **Honeypot Implementation** – Deployment in isolated environment for attack monitoring  
-- **Web Application Testing** – Targeted vulnerability scans and manual assessments  
-- **OSINT Cases** – Public footprint mapping for investigative purposes  
-- **Bug Bounty Reports** – Submissions to public and private programs
+## Links
+
+[![Senthex](https://img.shields.io/badge/Senthex-senthex.com-blue)](https://senthex.com/proxy)
+[![PyPI](https://img.shields.io/pypi/v/senthex)](https://pypi.org/project/senthex/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Yohann%20Sidot-0077B5)](https://www.linkedin.com/in/yohann-sidot-ab055a192)
+[![Dev.to](https://img.shields.io/badge/Dev.to-yohannsidot-000000)](https://dev.to/yohannsidot)
 
 ---
 
-## Professional Approach
-My work is based on:
-1. Systematic reconnaissance  
-2. Careful vulnerability identification  
-3. Clear documentation of findings  
-
-I focus on delivering actionable results while continuing to expand my knowledge and capabilities.
-
----
-
-## Contact
-**Email:** [contact@yohannsidot.com](mailto:contact@yohannsidot.com)  
-**LinkedIn:** [linkedin.com/in/yohannsidot](https://linkedin.com/in/yohannsidot)  
-**GitHub:** [github.com/YohannSidot](https://github.com/YohannSidot)  
-
----
-
-*Last updated: 2025-08-14*
+*Built solo in 3 weeks with Claude Code. Currently in free beta — [try to break it](https://senthex.com/proxy).*
