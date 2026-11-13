@@ -1,6 +1,6 @@
 # Hey, I'm Yohann 👋
 
-I build **verified GPU kernels for Apple Silicon**: Metal kernels for inference engines, written by Claude models under my direction, checked bit for bit and benchmarked on real shapes.
+I build **verified GPU kernels for Apple Silicon**: Metal kernels for inference engines, written by Claude models under my direction, checked bit for bit and benchmarked with interleaved A/B runs.
 
 ## What I'm building
 
