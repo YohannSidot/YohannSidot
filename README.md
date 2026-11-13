@@ -1,42 +1,25 @@
 # Hey, I'm Yohann 👋
 
-Cybersecurity student building **Senthex** an AI firewall for LLM API calls.
+I build **verified GPU kernels for Apple Silicon**: Metal kernels for inference engines, written by Claude models under my direction, checked bit for bit and benchmarked on real shapes.
 
 ## What I'm building
 
-[Senthex](https://senthex.com/proxy) is a transparent reverse proxy that scans every request and response to OpenAI, Anthropic, Mistral, Gemini, and OpenRouter in real time. One line of code, 16ms overhead, 24 security shields.
+- One operation of your engine at a time (quantized matmul, attention, speculative verify), on Apple Silicon.
+- Each kernel comes with its verifier (float64 reference, fuzzing of shapes and values, bit-for-bit batch-invariance checks) and an interleaved A/B benchmark that you run on your own machine.
+- When the answer is "no gain here", I say so, with the numbers.
 
-```python
-client = OpenAI(
-    api_key="sk-...",
-    base_url="https://app.senthex.com/v1",
-    default_headers={"X-Senthex-Key": "your-key"}
-)
-```
+Examples, the verifier, the benchmark and the commissioning terms are in **[verified-metal-kernels](https://github.com/YohannSidot/verified-metal-kernels)**. Commissions are paid on result.
 
-**Some things I built that nobody else does:**
-- Multi-turn injection tracking across entire conversations
-- Anti-bypass system with progressive trust levels — the harder you try, the harder it gets
-- Canary tokens for system prompt leak detection
-- Data classification with automatic provider routing
-- Agent-native mode — autonomous agents monitor their own security via response headers
+## Earlier work
 
-## Stack
+**Senthex**, an AI firewall for LLM API calls: a transparent reverse proxy that scanned requests and responses to the main LLM providers in real time, with multi-turn injection tracking, canary tokens for system prompt leaks and an agent-native mode.
 
-Python · FastAPI · React · PostgreSQL · Redis · Docker
-
-## Writing
+Writing from that project:
 
 - [How I Detect Multi-Turn Prompt Injections Without ML](https://dev.to/yohannsidot/how-i-detect-multi-turn-prompt-injections-without-ml-13oj)
 - [How Canary Tokens Detect System Prompt Leaks in Real Time](https://dev.to/yohannsidot)
 
 ## Links
 
-[![Senthex](https://img.shields.io/badge/Senthex-senthex.com-blue)](https://senthex.com/proxy)
-[![PyPI](https://img.shields.io/pypi/v/senthex)](https://pypi.org/project/senthex/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Yohann%20Sidot-0077B5)](https://www.linkedin.com/in/yohann-sidot-ab055a192)
 [![Dev.to](https://img.shields.io/badge/Dev.to-yohannsidot-000000)](https://dev.to/yohannsidot)
-
----
-
-*Built solo in 3 weeks with Claude Code. Currently in free beta — [try to break it](https://senthex.com/proxy).*
